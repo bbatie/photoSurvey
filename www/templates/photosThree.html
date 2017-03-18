@@ -1,0 +1,36 @@
+<ion-view title="Photos Three" id="page5" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div>
+            <p>
+                Any Obstructions To The Property
+            </p>
+        </div>
+        <ion-list id="photosThree-list3" class=" ">
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosThree-list-item9">
+              <img data-ng-src="{{myImage9}}" ng-click="openModal(myImage9)"/>
+                <h2>North</h2>
+                <p style="white-space:normal;">Looking to the properties North side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(9)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosThree-list-item10">
+              <img data-ng-src="{{myImage10}}" ng-click="openModal(myImage10)"/>
+              <h2>South</h2>
+                <p style="white-space:normal;">Looking to properties South side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(10)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosThree-list-item11">
+              <img data-ng-src="{{myImage11}}" ng-click="openModal(myImage11)"/>
+                <h2>East</h2>
+                <p style="white-space:normal;">Looking to properties East side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(11)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosThree-list-item12">
+              <img data-ng-src="{{myImage12}}" ng-click="openModal(myImage12)"/>
+                <h2>West</h2>
+                <p style="white-space:normal;">Looking to properties West side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(12)"></i>
+            </ion-item>
+        </ion-list>
+        <a ui-sref="questionnaire" id="photosThree-button5" class=" button button-positive  button-block ">Next</a>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view title="Property Address" id="page2" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div>
+            <p>
+                Please enter the address for the property:
+            </p>
+        </div>
+        <form id="propertyAddress-form1" class="list ">
+            <label class="item item-input item-stacked-label " id="propertyAddress-input1" name="Address" >
+                <span class="input-label">Address</span>
+                <input type="text" placeholder="123 Main Street" ng-model="fields.myAddress">
+            </label>
+            <label class="item item-input item-stacked-label " id="propertyAddress-input2" name="City" ng-show="fields.myAddress.length > 5">
+                <span class="input-label">City</span>
+                <input type="text" placeholder="Anytown" ng-model="fields.myCity">
+            </label>
+            <label class="item item-input item-stacked-label " id="propertyAddress-input3" name="State"  ng-show="fields.myCity.length > 1">
+                <span class="input-label">State</span>
+                <input type="text" placeholder="My State" ng-model="fields.myState">
+            </label>
+            <label class="item item-input item-stacked-label " id="propertyAddress-input4" name="Zip"  ng-show="fields.myState.length > 1">
+                <span class="input-label">Zip Code</span>
+                <input type="number" placeholder="123456" ng-model="fields.myZip">
+            </label>
+            <a ui-sref="photosOne" id="propertyAddress-button2" class=" button button-positive  button-block "  ng-show="fields.myZip < 11111">Next</a>
+        </form>
+    </ion-content>
+</ion-view>

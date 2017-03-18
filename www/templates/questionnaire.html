@@ -1,0 +1,104 @@
+<ion-view title="Questionnaire " id="page6" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div>
+            <p>
+                Photo Survey Questionnaire:
+            </p>
+        </div>
+        <div class="item item-body " id="questionnaire-list-item-container1">
+            <p id="questionnaire-markdown2" style="margin-top:0px;color:#000000;" class=" ">Is there a Structure on the property?</p>
+            <form id="questionnaire-form4" class="list ">
+                <label class="item item-select " id="questionnaire-select2">
+                    <span class="input-label">Select</span>
+                    <select ng-model="fields.structure">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <div class="item item-body " id="questionnaire-list-item-container2" ng-hide="!fields.structure">
+            <p id="questionnaire-markdown3" style="margin-top:0;color:#000000;" class=" ">Is the lot overgrown?</p>
+            <form id="questionnaire-form5" class="list ">
+                <label class="item item-select " id="questionnaire-select3">
+                    <span class="input-label">Select</span>
+                    <select ng-model="fields.overgrown">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <div class="item item-body " id="questionnaire-list-item-container3"  ng-hide="!fields.overgrown">
+            <p id="questionnaire-markdown4" style="margin-top:0;color:#000000;" class=" ">Foundation type:</p>
+            <form id="questionnaire-form6" class="list ">
+                <label class="item item-select " id="questionnaire-select4" >
+                    <span class="input-label">Select</span>
+                    <select ng-model="fields.foundationType">
+                        <option>Raised</option>
+                        <option>Slab on Grade</option>
+                        <option>Elevated</option>
+                        <option>Crawlspace</option>
+                        <option>Unknown</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <div class="item item-body " id="questionnaire-list-item-container4"  ng-hide="!fields.foundationType">
+            <p id="questionnaire-markdown5" style="margin-top:0;color:#000000;" class=" ">Is there roof damage?</p>
+            <form id="questionnaire-form7" class="list ">
+                <label class="item item-select " id="questionnaire-select5">
+                    <span class="input-label">Select</span>
+                    <select ng-model="fields.roofDamage">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <div class="item item-body " id="questionnaire-list-item-container5" ng-hide="!fields.roofDamage">
+            <p id="questionnaire-markdown6" style="margin-top:0;color:#000000;" class=" ">Is there exterior damage?</p>
+            <form id="questionnaire-form8" class="list ">
+                <label class="item item-select " id="questionnaire-select6">
+                    <span class="input-label">Select</span>
+                    <select ng-model="fields.exteriorDamage">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <div class="item item-body " id="questionnaire-list-item-container6" ng-hide="!fields.exteriorDamage">
+            <p id="questionnaire-markdown7" style="margin-top:0;color:#000000;" class=" ">Is there graffiti?</p>
+            <form id="questionnaire-form9" class="list ">
+                <label class="item item-select " id="questionnaire-select7">
+                    <span class="input-label">Select</span>
+                    <select ng-model="fields.grafitti">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <div class="item item-body " id="questionnaire-list-item-container7" ng-hide="!fields.grafitti">
+            <p id="questionnaire-markdown8" style="margin-top:0;color:#000000;" class=" ">Are there boarded windows or doors?</p>
+            <form id="questionnaire-form10" class="list ">
+                <label class="item item-select " id="questionnaire-select8">
+                    <span class="input-label">Select</span>
+                    <select ng-model="fields.boardedUp">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>Maybe</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+        <a ui-sref="otherNotes" id="questionnaire-button6" class=" button button-positive  button-block " > <!--ng-hide="!fields.boardedUp"-->
+      Next</a>
+    </ion-content>
+</ion-view>

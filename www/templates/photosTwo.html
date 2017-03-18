@@ -1,0 +1,36 @@
+<ion-view title="Photos Two" id="page4" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div>
+            <p>
+                Looking Away From The Property
+            </p>
+        </div>
+        <ion-list id="photosTwo-list2" class=" ">
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosTwo-list-item5">
+              <img data-ng-src="{{myImage5}}"  ng-click="openModal(myImage5)"/>
+                <h2>North</h2>
+                <p style="white-space:normal;">Looking away from the properties North side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(5)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosTwo-list-item6">
+              <img data-ng-src="{{myImage6}}" ng-click="openModal(myImage6)"/>
+              <h2>South</h2>
+                <p style="white-space:normal;">Looking away from properties South side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(6)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosTwo-list-item7">
+              <img data-ng-src="{{myImage7}}" ng-click="openModal(myImage7)"/>
+                <h2>East</h2>
+                <p style="white-space:normal;">Looking away from properties East side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(7)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosTwo-list-item8">
+              <img data-ng-src="{{myImage8}}" ng-click="openModal(myImage8)"/>
+              <h2>West</h2>
+                <p style="white-space:normal;">Looking away from properties West side</p>
+                <i class="icon ion-ios-camera-outline"  ng-click="camStart(8)"></i>
+            </ion-item>
+        </ion-list>
+        <a ui-sref="photosThree" id="photosTwo-button4" class=" button button-positive  button-block ">Next</a>
+    </ion-content>
+</ion-view>

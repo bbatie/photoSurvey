@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://maps.googleapis.com/ https://maps.gstatic.com/ https://mts0.googleapis.com/ 'unsafe-inline' 'unsafe-eval'">
+
+
+
+    <title></title>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es"></script>
+    <!--<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+    -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+
+    <style type="text/css">
+
+      .myMap {
+        max-width:100%;
+      }
+
+      .scroll {
+        height: 100%;
+      }
+
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px;
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+
+
+      body {
+        background-color: transparent;
+        /*background: url('img/lazy_ls.jpg') no-repeat center;*/
+      }
+
+      .myCameraContent {
+        background-color: transparent;
+      }
+
+      .smallText {
+        font-size: 10px;
+      }
+
+      .footer-bar {
+        height: 75px;
+      }
+
+      [nav-view-transition="ios"][nav-view-direction="forward"], [nav-view-transition="ios"][nav-view-direction="back"] {
+        background-color: transparent;
+      }
+
+
+
+      .transparent {
+        background: transparent !important;
+      }
+      .image-modal {
+        width: 100% !important;
+        height: 100%;
+        top: 0 !important;
+        left: 0 !important;
+      }
+      .fullscreen-image {
+        max-width: 100%;
+        max-height: 100%;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        overflow: auto;
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+
+      /* Fix modal backdrop for smaller devices */
+      @media (max-width: 679px) {
+        .active .modal-backdrop-bg {
+          opacity: .5;
+        }
+        .modal-backdrop-bg {
+          -webkit-transition: opacity 300ms ease-in-out;
+          transition: opacity 300ms ease-in-out;
+          background-color: #000;
+          opacity: 0;
+        }
+      }
+
+      #arrow{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: 50% 50% no-repeat;
+        background-size: 30px 30px;
+        background-image: url('arrow.png');
+        top: 0;
+        left: 50%;
+        margin: 30px 0 0 -15px;
+      }
+
+
+    </style>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+
+
+
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7" style="background-color: transparent">
+  <div>
+    <div>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view> </ion-nav-view>
+    </div>
+</div>
+
+  <script id="image-modal.html" type="text/ng-template">
+    <div class="modal image-modal transparent" ng-click="closeModal()">
+      <ion-pane class="transparent">
+        <img ng-src="{{imageSrc}}" class="fullscreen-image"/>
+<button class="button button-block">Start</button>
+      </ion-pane>
+    </div>
+  </script>
+
+  </body>
+</html>

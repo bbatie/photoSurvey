@@ -1,0 +1,22 @@
+<ion-view title="Other Notes" id="page7" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div>
+            <p>
+                Any other notes about the property:
+            </p>
+        </div>
+        <form id="otherNotes-form11" class="list ">
+            <label class="item item-input item-stacked-label" id="otherNotes-textarea1" name="Notes">
+                <span class="input-label">Notes</span>
+              <textarea placeholder="Any notes or observations not included in the survey " ng-model="fields.otherNotes" rows="10"></textarea>
+            </label>
+        </form>
+        <a id="otherNotes-button7" class=" button button-positive  button-block " ng-click="writeFileData()">Finish</a>
+
+
+      <img data-ng-src="{{mapImage}}" class="myMap" id="googleMap"/>
+
+
+    <!--  <div id="myMap" data-tap-disabled="true" class="map"></div>-->
+    </ion-content>
+</ion-view>

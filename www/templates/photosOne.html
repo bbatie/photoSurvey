@@ -1,0 +1,36 @@
+<ion-view title="Photos One" id="page3" class=" ">
+    <ion-content padding="true" class="has-header">
+        <div>
+            <p>
+                Looking At The Property
+            </p>
+        </div>
+        <ion-list id="photosOne-list1" class=" ">
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosOne-list-item1">
+              <img data-ng-src="{{myImage1}}" ng-click="openModal(myImage1)"/>
+              <h2>North</h2>
+                <p style="white-space:normal;">Looking at the properties North side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(1)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosOne-list-item2">
+              <img data-ng-src="{{myImage2}}" ng-click="openModal(myImage2)"/>
+              <h2>South</h2>
+                <p style="white-space:normal;">Looking at the properties South side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(2)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosOne-list-item3">
+              <img data-ng-src="{{myImage3}}" ng-click="openModal(myImage3)"/>
+              <h2>East</h2>
+                <p style="white-space:normal;">Looking at the properties East side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(3)"></i>
+            </ion-item>
+            <ion-item class="item-thumbnail-left item-icon-right  " id="photosOne-list-item4">
+              <img data-ng-src="{{myImage4}}" ng-click="openModal(myImage4)"/>
+                <h2>West</h2>
+                <p style="white-space:normal;">Looking at the properties West side</p>
+                <i class="icon ion-ios-camera-outline" ng-click="camStart(4)"></i>
+            </ion-item>
+        </ion-list>
+        <a ui-sref="photosTwo" id="photosOne-button3" class=" button button-positive  button-block ">Next</a>
+    </ion-content>
+</ion-view>
