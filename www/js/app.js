@@ -46,9 +46,6 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
       }
 
 
-
-
-
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
